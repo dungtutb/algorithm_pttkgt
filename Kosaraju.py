@@ -17,6 +17,7 @@ def duyet(mang_vertex,matran):
                 break
 def Kosaraju(mang_vertex,matran):
     duyet(mang_vertex,matran)
+    print "Sau buoc 1:"
     for i in range(len(mang_vertex)):
         print "dinh %d: %d %d %d" %(i+1,mang_vertex[i].start_time,mang_vertex[i].end_time,mang_vertex[i].group)
     #buoc 2  
@@ -27,6 +28,7 @@ def Kosaraju(mang_vertex,matran):
         mang_vertex[i].reset()
     duyet(mang_vertex,matran)
     mang_vertex.sort(key=lambda ver: ver.index)
+    print "Sau buoc 3:"
     for i in range(len(mang_vertex)):
         print "dinh %d: %d %d %d" %(i+1,mang_vertex[i].start_time,mang_vertex[i].end_time,mang_vertex[i].group)
 
